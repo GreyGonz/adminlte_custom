@@ -1,16 +1,21 @@
 
+html, body {
+  margin: 0;
+  height: 100%;
+}
 
-/*body {*/
-  /*font-family: monospace;*/
-  /*font-weight: 500;*/
-  /*font-size: 14px;*/
-  /*color: #333;*/
-/*}*/
+body {
+  font-family: monospace;
+  font-weight: 500;
+  font-size: 14px;
+  color: #333;
+}
 
-/*a {*/
-  /*text-decoration: none;*/
-  /*color: inherit;*/
-/*}*/
+a {
+  text-decoration: none;
+  color: inherit;
+  width: 100%;
+}
 
 .rounded {
   border-radius: 50%;
@@ -25,6 +30,7 @@
 
 .container {
   display: grid;
+  height: 100%;
   grid-template-columns: 230px 1fr 200px;
   grid-template-rows: 40px 1fr 40px;
 }
@@ -73,6 +79,26 @@ nav {
 
 .avatar {
   width: 30px;
+}
+
+.expand-menu {
+  margin: 5em;
+}
+.expand-menu-subtitles {
+  overflow: hidden;
+  max-height: 0px;
+  transition: max-height 0.3s;
+}
+.expand-menu-title:hover + .expand-menu-subtitles {
+  max-height: 500px;
+}
+
+.expand-menu-subtitles li {
+  padding: 5px 5px 5px 20px;
+}
+
+.expand-menu-subtitles li:hover {
+  background: #fff;
 }
 
 ul, li {
@@ -216,6 +242,9 @@ section {
 }
 
 footer {
+  display: flex;
+  align-items: center;
+  padding: 5px;
   background: #FFFFFF;
   color: #464646;
   border-top: 1px solid #d2d6de;
