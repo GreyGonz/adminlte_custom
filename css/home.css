@@ -17,6 +17,12 @@ a {
   width: 100%;
 }
 
+ul, li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
 .rounded {
   border-radius: 50%;
 }
@@ -81,31 +87,6 @@ nav {
   width: 30px;
 }
 
-.expand-menu {
-  margin: 5em;
-}
-.expand-menu-subtitles {
-  overflow: hidden;
-  max-height: 0px;
-  transition: max-height 0.3s;
-}
-.expand-menu-title:hover + .expand-menu-subtitles {
-  max-height: 500px;
-}
-
-.expand-menu-subtitles li {
-  padding: 5px 5px 5px 20px;
-}
-
-.expand-menu-subtitles li:hover {
-  background: #fff;
-}
-
-ul, li {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
 
 .nav-ul {
   display: flex;
@@ -209,7 +190,7 @@ aside {
   align-items: stretch;
 }
 
-.left-side-bar a {
+.link {
   padding: 10px;
   width: 100%;
   color: #b8c7ce;
@@ -227,15 +208,51 @@ aside {
   color: white;
 }
 
-.drop-down, .drop-down ul {
-  display: flex;
-  flex-direction: column;
-}
 
 .right-side-bar {
   grid-row: 2/4;
   grid-column: 3;
 }
+
+/********* EXPAND MENU ************/
+
+/*.drop-down {*/
+  /*padding: 5px;*/
+/*}*/
+
+.drop-down {
+  display: flex;
+  flex-direction: column;
+}
+
+.drop-down ul {
+  display: none;
+}
+
+.expand-menu {
+  margin: 5em;
+}
+
+.expand-menu-title {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+}
+
+.expand-menu-title:hover + .expand-menu-subtitles {
+  display: block;
+}
+
+.expand-menu-subtitles:hover {
+  display: block;
+}
+
+.expand-menu-subtitles a{
+  padding: 5px 5px 5px 20px;
+}
+
+/*************** Final EXPAND MENU ***************/
+
 section {
   background: #FFFFFF;
   box-shadow: 0 1px 1px rgba(0,0,0,0.1);
